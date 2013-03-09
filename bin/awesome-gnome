@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ -n "$DESKTOP_AUTOSTART_ID" ]; then
+    dbus-send \
+        --session \
+        --print-reply=string \
+        --dest=org.gnome.SessionManager \
+        "/org/gnome/SessionManager" \
+        org.gnome.SessionManager.RegisterClient \
+        "string:awesome-gnome" \
+        "string:$DESKTOP_AUTOSTART_ID"
+fi
+
+exec awesome

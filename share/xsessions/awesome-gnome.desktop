@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Awesome + Gnome
+Comment=Use the Awesome window manager inside the Gnome desktop environment
+Exec="gnome-session --session=awesome-gnome"
+Icon=awesome
+Type=XSession
